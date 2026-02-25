@@ -8,8 +8,8 @@ import clsx from "clsx";
 const navigationLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Admission", href: "#admission" },
-  { name: "Contact", href: "/contact" },
+  { name: "Admission", href: "/admission" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-primary text-white">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
 
           {/* Logo */}
