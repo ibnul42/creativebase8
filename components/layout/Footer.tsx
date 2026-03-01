@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="text-sm bg-primary text-white">
+    <footer className="text-sm text-white">
       <div className="container mx-auto px-4 py-3">
         <section className="grid grid-cols-1 md:grid-cols-3 space-y-3">
           <div className="text-xl font-bold">Logo</div>

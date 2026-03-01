@@ -4,11 +4,11 @@ import React from "react";
 
 export default function Course() {
   return (
-    <div className="py-10 space-y-5 bg-secondary text-white">
+    <div className="container mx-auto py-10 space-y-5 text-white">
       <p className="uppercase text-center text-3xl xl:text-4xl font-semibold">
         Our courses
       </p>
-      <div className="px-3 flex flex-wrap gap-4">
+      <div className="px-3 flex flex-wrap justify-center mt-6 gap-4">
         <SingleCourse
           title="Graphic Design"
           source="/assets/course/graphic.png"
@@ -75,7 +75,7 @@ const SingleCourse = ({
         <div className="mt-5 flex items-center justify-center">
           <Link
             href="/"
-            className="block text-center w-fit bg-[#b1c2ba]/80 hover:bg-[#b1c2ba] transition-all text-white py-2 px-4 rounded-lg border border-white/40 shadow-2xl font-bold"
+            className="block text-center w-fit bg-[#b1c2ba]/80 hover:bg-[#b1c2ba] transition-all text-secondary py-2 px-4 rounded-lg border border-white/40 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] font-bold"
           >
             Enroll Now
           </Link>
