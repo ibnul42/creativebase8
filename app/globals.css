@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
   --primary: #FD9800;
   --secondary: #331039;
 }
@@ -28,7 +28,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   /* background-image: linear-gradient(to bottom right, #030414, #331039); */
-  background-image: url("/assets/background.jpg");
+  background-image: url("/assets/background.png");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

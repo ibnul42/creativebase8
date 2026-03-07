@@ -21,7 +21,7 @@ export default function page() {
               //   value=""
               placeholder="Hasan"
               // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0 text-black/65"
+              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
             />
           </div>
           <div className="flex flex-col gap-1 col-span-1">
@@ -34,7 +34,7 @@ export default function page() {
               //   value=""
               placeholder="Jamil"
               // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0 text-black/65"
+              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
             />
           </div>
           <div className="flex flex-col gap-1 col-span-2">
@@ -47,7 +47,7 @@ export default function page() {
               //   value=""
               placeholder="jamil@gmail.co"
               // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0 text-black/65"
+              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
             />
           </div>
           <div className="flex flex-col gap-1 col-span-2">
@@ -60,7 +60,7 @@ export default function page() {
               //   value=""
               placeholder="jamil@gmail.co"
               // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0 text-black/65"
+              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
             />
           </div>
           <div className="flex flex-col gap-1 col-span-2">
@@ -71,7 +71,7 @@ export default function page() {
               name=""
               id=""
               placeholder="What is the registration fee"
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0 text-black/65"
+              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
             ></textarea>
           </div>
           <div className="col-span-2 flex justify-end">

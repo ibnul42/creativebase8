@@ -5,7 +5,7 @@ export default function KnowUs() {
   const [activeTab, setActiveTab] = useState("mission");
 
   return (
-    <div className="mx-auto max-w-3xl py-3 text-white border border-white/20 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] px-6 space-y-5">
+    <div className="mx-auto max-w-3xl py-3 text-white border border-white/20 backdrop-blur-xs bg-white/5 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] px-6 space-y-5">
       <p className="uppercase text-center text-3xl xl:text-4xl font-semibold">
         আমাদেরকে জানুন!
       </p>
