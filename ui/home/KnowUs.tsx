@@ -1,55 +1,51 @@
 "use client";
 import React, { useState } from "react";
-import { IoEyeSharp } from "react-icons/io5";
-import { FaBullseye } from "react-icons/fa";
 
 export default function KnowUs() {
   const [activeTab, setActiveTab] = useState("mission");
 
   return (
-    <div className="py-10 text-white">
+    <div className="mx-auto max-w-3xl py-3 text-white border border-white/20 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] px-6 space-y-5">
       <p className="uppercase text-center text-3xl xl:text-4xl font-semibold">
-        Know Us!
+        আমাদেরকে জানুন!
       </p>
 
       {/* Tabs */}
-      <div className="px-3 mx-auto mt-6 max-w-3xl">
-        <div className="flex gap-4 backdrop-blur-3xl text-black rounded-md overflow-hidden">
+      <div className="space-y-3">
+        <div className="flex overflow-hidden border-t">
           <button
             onClick={() => setActiveTab("mission")}
             className={`
-              flex-1 py-3 rounded-xl font-semibold transition-all cursor-pointer duration-300
-              backdrop-blur-md border border-white/20 flex items-center justify-center gap-2
+              flex-1 py-3 font-semibold transition-all cursor-pointer duration-300
+              flex items-center justify-center gap-2
               ${
                 activeTab === "mission"
-                  ? "bg-yellow-400 text-black shadow-lg"
-                  : "bg-white/10 text-white hover:bg-white/20"
+                  ? "bg-white/20 shadow-lg"
+                  : "bg-transparent text-white hover:bg-white/5"
               }
             `}
           >
-            <FaBullseye />
             <span>Mission</span>
           </button>
 
           <button
             onClick={() => setActiveTab("vision")}
             className={`
-              flex-1 py-3 rounded-xl font-semibold transition-all cursor-pointer duration-300
-              backdrop-blur-md border border-white/20 flex items-center justify-center gap-2
+              flex-1 py-3 font-semibold transition-all cursor-pointer duration-300
+              flex items-center justify-center gap-2
               ${
                 activeTab === "vision"
-                  ? "bg-yellow-400 text-black shadow-lg"
-                  : "bg-white/10 text-white hover:bg-white/20"
+                  ? "bg-white/20 shadow-lg"
+                  : "bg-transparent text-white hover:bg-white/5"
               }
             `}
           >
-            <IoEyeSharp />
             <span>Vision</span>
           </button>
         </div>
 
         {/* Content */}
-        <div className="mt-6  text-white p-6 rounded-md">
+        <div className="text-white rounded-md text-center text-sm">
           {activeTab === "mission" && (
             <p>
               আমরা বেকারদের ভেতরে বিশ্বমানের ব্যবসায়িক মানসিকতা তৈরি করা এবং

@@ -33,18 +33,18 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto backdrop-blur-xs bg-white/5 p-4 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={20}
         slidesPerView={1}
         autoplay={{ delay: 3000 }}
         pagination={{ clickable: true }}
-        className="rounded-xl overflow-hidden"
+        className="overflow-hidden"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <section className="text-center py-4 bg-secondary text-white">
+            <section className="text-center py-4">
               <p className="md:text-lg font-semibold">{slide.title}</p>
             </section>
             <div className="relative">

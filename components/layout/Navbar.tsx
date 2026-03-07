@@ -15,6 +15,7 @@ const navigationLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  console.log(pathname)
 
   const isActive = (href: string) => {
     if (href.startsWith("#")) return false;
@@ -22,8 +23,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-primary text-white">
-      <div className="container mx-auto px-4">
+    <nav className="text-white">
+      <div className="container mx-auto px-4 border border-white/20 shadow-[13px_11px_14px_1px_rgba(0,0,0,0.5)] rounded-full mt-3">
         <div className="flex justify-between items-center h-16">
 
           {/* Logo */}
@@ -36,10 +37,10 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className={clsx(
-                    "px-4 py-3 font-bold uppercase transition-all duration-200",
+                    "px-4 py-2 font-bold uppercase transition-all duration-200 border border-transparent rounded-full",
                     isActive(link.href)
-                      ? "bg-secondary text-white"
-                      : "hover:bg-secondary/90"
+                      ? "border-white/40 text-white"
+                      : "hover:text-white/70"
                   )}
                 >
                   {link.name}
