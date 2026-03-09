@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import Image from "next/image";
 
 const navigationLinks = [
   { name: "Home", href: "/" },
@@ -15,7 +16,7 @@ const navigationLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  console.log(pathname)
+  console.log(pathname);
 
   const isActive = (href: string) => {
     if (href.startsWith("#")) return false;
@@ -23,12 +24,19 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="text-white">
-      <div className="container mx-auto px-4 border border-white/20 shadow-[13px_11px_14px_1px_rgba(0,0,0,0.5)] rounded-full mt-3">
+    <nav className="px-3">
+      <div className="container mx-auto px-4 border backdrop-blur-xs bg-white/5 border-white/20 shadow-[13px_11px_14px_1px_rgba(0,0,0,0.5)] rounded-lg md:rounded-full mt-3">
         <div className="flex justify-between items-center h-16">
-
           {/* Logo */}
-          <div className="text-xl font-bold">Logo</div>
+          <Link href="/" className="text-xl font-bold">
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="inline-block mr-2"
+            />
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center">
@@ -39,8 +47,8 @@ export default function Navbar() {
                   className={clsx(
                     "px-4 py-2 font-bold uppercase transition-all duration-200 border border-transparent rounded-full",
                     isActive(link.href)
-                      ? "border-white/40 text-white"
-                      : "hover:text-white/70"
+                      ? "border-white/40 text-white bg-white/20"
+                      : "hover:text-white/70",
                   )}
                 >
                   {link.name}
@@ -57,19 +65,19 @@ export default function Navbar() {
             <span
               className={clsx(
                 "w-6 h-0.5 bg-white transition-all",
-                isOpen && "rotate-45 translate-y-1.5"
+                isOpen && "rotate-45 translate-y-1.5",
               )}
             />
             <span
               className={clsx(
                 "w-6 h-0.5 bg-white transition-all",
-                isOpen && "opacity-0"
+                isOpen && "opacity-0",
               )}
             />
             <span
               className={clsx(
                 "w-6 h-0.5 bg-white transition-all",
-                isOpen && "-rotate-45 -translate-y-1.5"
+                isOpen && "-rotate-45 -translate-y-1.5",
               )}
             />
           </button>
@@ -79,7 +87,7 @@ export default function Navbar() {
         <div
           className={clsx(
             "md:hidden overflow-hidden transition-all duration-300",
-            isOpen ? "max-h-96 py-4" : "max-h-0"
+            isOpen ? "max-h-96 py-4" : "max-h-0",
           )}
         >
           <ul className="flex flex-col gap-2">
@@ -92,7 +100,7 @@ export default function Navbar() {
                     "block px-4 py-2 rounded-md transition-all",
                     isActive(link.href)
                       ? "bg-white text-primary font-semibold"
-                      : "hover:bg-white/20"
+                      : "hover:bg-white/20",
                   )}
                 >
                   {link.name}
@@ -101,7 +109,6 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-
       </div>
     </nav>
   );

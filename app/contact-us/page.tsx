@@ -3,7 +3,7 @@ import React from "react";
 export default function page() {
   return (
     <div className="py-10">
-      <div className="container mx-auto max-w-4xl px-4 grid grid-cols-12 gap-5 z-10">
+      <div className="container mx-auto max-w-4xl px-3 grid grid-cols-12 gap-5 z-10">
         <section className="px-6 lg:px-10 py-5 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg col-span-12 md:col-span-4 space-y-3 flex flex-col justify-center">
           <p className="capitalize text-3xl xl:text-4xl font-semibold">
             contact us!
@@ -75,7 +75,7 @@ export default function page() {
             ></textarea>
           </div>
           <div className="col-span-2 flex justify-end">
-            <button className="px-3 py-2 rounded-md bg-primary cursor-pointer hover:bg-primary/80 hover:text-secondary/80 transition-all">
+            <button className="py-2 px-6 rounded-full border border-white/40 bg-white/10 hover:bg-white/15 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] cursor-pointer transition-all">
               Submit
             </button>
           </div>

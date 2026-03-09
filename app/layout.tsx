@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Raleway } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
+const raleway = Raleway({
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased min-h-dvh grid grid-rows-[auto_1fr_auto]`}
+        className={`${raleway.className} antialiased min-h-dvh grid grid-rows-[auto_1fr_auto]`}
       >
         <Navbar />
         {children}

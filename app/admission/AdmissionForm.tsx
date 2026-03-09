@@ -21,13 +21,13 @@ export default function AdmissionForm() {
   const [classTime, setClassTime] = useState<string>("");
 
   return (
-    <div className="container mx-auto max-w-4xl px-4 grid grid-cols-12 gap-5 z-10">
-      <section className="px-6 lg:px-10 py-5 bg-[#FFFFFF8F] border border-white rounded-lg col-span-12 space-y-3 flex flex-col justify-center">
-        <p className="uppercase text-center text-secondary text-3xl xl:text-4xl font-semibold">
+    <div className="container mx-auto max-w-4xl px-3 grid grid-cols-12 gap-5 z-10">
+      <section className="px-6 lg:px-10 py-5 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg col-span-12 space-y-3 flex flex-col justify-center">
+        <p className="uppercase text-center text-3xl xl:text-4xl font-semibold">
           Admission Form
         </p>
       </section>
-      <form className="px-6 md:px-10 py-5 col-span-12 bg-[#FFFFFF8F] border border-white rounded-lg space-y-3 text-sm">
+      <form className="px-6 md:px-10 py-5 col-span-12 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg space-y-3 text-sm">
         <div className="flex flex-col gap-1 col-span-1">
           <label htmlFor="fullName" className="capitalize">
             Full name
@@ -132,7 +132,7 @@ export default function AdmissionForm() {
           />
         </div>
         <div className="col-span-2 flex justify-end">
-          <button className="px-3 py-2 rounded-md bg-primary font-medium cursor-pointer hover:bg-primary/80 hover:text-secondary/80 transition-all">
+          <button className="py-2 px-6 rounded-full border border-white/40 bg-white/10 hover:bg-white/15 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] transition-all cursor-pointer">
             Submit
           </button>
         </div>

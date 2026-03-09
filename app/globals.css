@@ -28,7 +28,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   /* background-image: linear-gradient(to bottom right, #030414, #331039); */
-  background-image: url("/assets/background.png");
+  background-image: url("/assets/background6.webp");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
