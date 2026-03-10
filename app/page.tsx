@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <KnowUs />
-      <Mentors />
+      {/* <KnowUs /> */}
       <Course />
+      <Mentors />
     </div>
   );
 }

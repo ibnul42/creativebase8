@@ -54,7 +54,7 @@ const SingleCourse = ({
   return (
     <div className="backdrop-blur-xs bg-white/5 w-full max-w-72 rounded-2xl border shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] border-white/20 overflow-hidden flex flex-col">
       <p className="text-center py-5 text-xl font-bold h-20">{title}</p>
-      <section className="backdrop-blur-sm flex-1 rounded-xl shadow-2xl shadow-black bg-white/5 border-t border-white/20 px-3 py-4 space-y-2">
+      <section className="backdrop-blur-sm flex-1 rounded-xl shadow-2xl shadow-black bg-white/5 border-t border-white/20 px-3 py-4 space-y-5">
         <article className="px-3 py-1 h-24 relative">
           <Image src={source} alt={title} fill className="object-contain" />
         </article>
@@ -70,7 +70,7 @@ const SingleCourse = ({
           </p>
           <p className="px-3 flex-1">{discountedPrice}</p>
         </section>
-        <div className="mt-5 flex items-center justify-center">
+        <div className="mt-5 py-3 flex items-center justify-center">
           <Link
             href="/"
             className="block text-center w-fit transition-all py-2 px-6 rounded-full border border-white/40 bg-white/10 hover:bg-white/15 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] font-bold"

@@ -15,13 +15,13 @@ export default function Hero() {
               Creative Base8
             </span>
           </p>
+          <p className="text-sm max-w-xl mx-auto">
+            আমরা আপনার ভেতরে লুকিয়ে থাকা সম্ভাবনাগুলো খুঁজে বের করি। এরপর
+            আধুনিক ও বিশ্বমানের চিন্তাধারার মাধ্যমে সেই সম্ভাবনাকে গড়ে তুলি এবং
+            আপনাকে এমনভাবে প্রস্তুত করি যেন আপনি আন্তর্জাতিক মার্কেটপ্লেসে
+            আত্মবিশ্বাসের সাথে কাজ করতে পারেন।
+          </p>
         </section>
-        <p className="text-sm max-w-xl mx-auto">
-          আমরা আপনার ভেতরে লুকিয়ে থাকা সম্ভাবনাগুলো খুঁজে বের করি। এরপর আধুনিক
-          ও বিশ্বমানের চিন্তাধারার মাধ্যমে সেই সম্ভাবনাকে গড়ে তুলি এবং আপনাকে
-          এমনভাবে প্রস্তুত করি যেন আপনি আন্তর্জাতিক মার্কেটপ্লেসে আত্মবিশ্বাসের
-          সাথে কাজ করতে পারেন।
-        </p>
         <section className="bg-white/5 bg-clip-padding backdrop-filter backdrop-blur-[3px] bg-opacity-70 border border-gray-100/20 mx-auto w-full max-w-md py-4 rounded-xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
           <p className="uppercase text-3xl xl:text-4xl font-bold">
             সময় খুবই সীমিত
@@ -43,10 +43,6 @@ export default function Hero() {
             {/* <FaRegArrowAltCircleRight className="translate-x-10 group-hover:translate-x-0 transition-all" /> */}
           </Link>
         </section>
-        {/* 
-        <p className="uppercase text-3xl xl:text-4xl font-extrabold flex flex-col">
-          <span>সময় খুবই সীমিত</span>
-        </p> */}
       </section>
     </div>
   );
