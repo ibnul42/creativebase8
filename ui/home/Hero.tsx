@@ -22,11 +22,11 @@ export default function Hero() {
             আত্মবিশ্বাসের সাথে কাজ করতে পারেন।
           </p>
         </section>
-        <section className="bg-white/5 bg-clip-padding backdrop-filter backdrop-blur-[3px] bg-opacity-70 border border-gray-100/20 mx-auto w-full max-w-md py-4 rounded-xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
+        <section className="bg-white/5 backdrop-blur-xs border border-white/20 mx-auto w-full max-w-md py-4 rounded-xl overflow-hidden shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
           <p className="uppercase text-3xl xl:text-4xl font-bold">
             সময় খুবই সীমিত
           </p>
-          <p className="text-3xl xl:text-4xl font-bold text-purple-900">
+          <p className="text-3xl xl:text-4xl font-bold text-yellow-200">
             Secure your Spot
           </p>
           <div className="w-full py-2">

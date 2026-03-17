@@ -8,7 +8,7 @@ export default function BackgroundWrapper({
   children: React.ReactNode;
 }) {
   const [bg] = useState(() => {
-    const num = Math.floor(Math.random() * 21) + 1;
+    const num = Math.floor(Math.random() * 8) + 1;
     return `/assets/background${num}.webp`;
   });
 

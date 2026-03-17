@@ -33,7 +33,7 @@ export default function Carousel() {
   ];
 
   return (
-    <div className="w-full mx-auto backdrop-blur-xs bg-white/5 p-4 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
+    <div className="w-full mx-auto backdrop-blur-xs bg-white/5 border border-white/10 p-4 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={20}

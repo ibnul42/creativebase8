@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import ContactForm from "./ContactForm";
 
 export default function page() {
   return (
@@ -10,76 +12,7 @@ export default function page() {
           </p>
           <p className="text-white">Anytime is perfect to contact us</p>
         </section>
-        <form className="px-6 md:px-10 py-5 col-span-12 md:col-span-8 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg grid grid-cols-2 gap-3 text-sm">
-          <div className="flex flex-col gap-1 col-span-1">
-            <label htmlFor="firstName" className="capitalize">
-              first name
-            </label>
-            <input
-              name="firstName"
-              type="text"
-              //   value=""
-              placeholder="Hasan"
-              // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
-            />
-          </div>
-          <div className="flex flex-col gap-1 col-span-1">
-            <label htmlFor="lastName" className="capitalize">
-              last name
-            </label>
-            <input
-              name="lastName"
-              type="text"
-              //   value=""
-              placeholder="Jamil"
-              // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
-            />
-          </div>
-          <div className="flex flex-col gap-1 col-span-2">
-            <label htmlFor="email" className="capitalize">
-              Email
-            </label>
-            <input
-              name="email"
-              type="text"
-              //   value=""
-              placeholder="jamil@gmail.co"
-              // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
-            />
-          </div>
-          <div className="flex flex-col gap-1 col-span-2">
-            <label htmlFor="subject" className="capitalize">
-              Subject
-            </label>
-            <input
-              name="subject"
-              type="text"
-              //   value=""
-              placeholder="jamil@gmail.co"
-              // onChange={}
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
-            />
-          </div>
-          <div className="flex flex-col gap-1 col-span-2">
-            <label htmlFor="message" className="capitalize">
-              Your message
-            </label>
-            <textarea
-              name=""
-              id=""
-              placeholder="What is the registration fee"
-              className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0"
-            ></textarea>
-          </div>
-          <div className="col-span-2 flex justify-end">
-            <button className="py-2 px-6 rounded-full border border-white/40 bg-white/10 hover:bg-white/15 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] cursor-pointer transition-all">
-              Submit
-            </button>
-          </div>
-        </form>
+        <ContactForm />
       </div>
     </div>
   );
