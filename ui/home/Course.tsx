@@ -1,3 +1,4 @@
+import GlassEffect from "@/components/GlassEffect";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,7 +6,8 @@ import React from "react";
 export default function Course() {
   return (
     <div className="container mx-auto py-10 space-y-5 text-white">
-      <p className="backdrop-blur-xs w-fit mx-auto px-4 py-2 rounded-full border border-white/10 shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] uppercase text-center text-3xl xl:text-4xl font-semibold">
+      <p className="backdrop-blur-xs w-fit mx-auto px-6 py-3 rounded-full shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] uppercase text-center text-3xl xl:text-4xl font-semibold overflow-hidden relative">
+        <GlassEffect left={false} right={false} />
         আমাদের কোর্স সমূহ
       </p>
       <div className="px-3 flex flex-wrap justify-center mt-6 gap-4">
@@ -52,7 +54,8 @@ const SingleCourse = ({
   discountedPrice,
 }: CourseProps) => {
   return (
-    <div className="backdrop-blur-xs bg-white/5 w-full max-w-72 rounded-2xl border shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] border-white/20 overflow-hidden flex flex-col">
+    <div className="backdrop-blur-xs bg-white/5 w-full max-w-72 rounded-2xl shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] overflow-hidden flex flex-col relative">
+      <GlassEffect />
       <p className="text-center py-5 text-xl font-bold h-20">{title}</p>
       <section className="backdrop-blur-sm flex-1 rounded-xl shadow-2xl shadow-black bg-white/5 border-t border-white/20 px-3 py-4 space-y-5">
         <article className="px-3 py-1 h-24 relative">

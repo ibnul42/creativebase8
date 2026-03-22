@@ -1,4 +1,5 @@
 import Countdown from "@/components/Countdown";
+import GlassEffect from "@/components/GlassEffect";
 import Link from "next/link";
 import React from "react";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
@@ -22,7 +23,8 @@ export default function Hero() {
             আত্মবিশ্বাসের সাথে কাজ করতে পারেন।
           </p>
         </section>
-        <section className="bg-white/5 backdrop-blur-xs border border-white/20 mx-auto w-full max-w-md py-4 rounded-xl overflow-hidden shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)]">
+        <section className="bg-white/5 backdrop-blur-xs mx-auto w-full max-w-md py-4 rounded-xl overflow-hidden shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] relative">
+          <GlassEffect />
           <p className="uppercase text-3xl xl:text-4xl font-bold">
             সময় খুবই সীমিত
           </p>
@@ -34,13 +36,13 @@ export default function Hero() {
           </div>
           <Link
             href="/"
-            className="px-5 py-2 w-fit mx-auto font-semibold transition-all cursor-pointer duration-300 rounded-full border bg-white/10 border-white/40 flex items-center justify-center group overflow-hidden relative"
+            className="px-6 py-2 w-fit mx-auto font-semibold transition-all cursor-pointer duration-300 rounded-full bg-white/10 flex items-center justify-center group overflow-hidden relative"
           >
+            <GlassEffect topGlow={false} bottomGlow={false} left={false} right={false} bottomClass="right-10" />
             <span className="group-hover:-translate-x-2 transition-all">
               এখনই ভর্তি হন!
             </span>
             <FaRegArrowAltCircleRight className="absolute top-3 -right-5 group-hover:right-1.5 transition-all" />
-            {/* <FaRegArrowAltCircleRight className="translate-x-10 group-hover:translate-x-0 transition-all" /> */}
           </Link>
         </section>
       </section>

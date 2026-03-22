@@ -1,9 +1,11 @@
+import GlassEffect from "@/components/GlassEffect";
 import Carousel from "./Carousel";
 
 export default function Mentors() {
   return (
     <div className="py-10 text-white">
-      <p className="backdrop-blur-xs w-fit mx-auto px-4 py-2 rounded-full border border-white/10 shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] uppercase text-center text-3xl xl:text-4xl font-semibold">
+      <p className="backdrop-blur-xs w-fit mx-auto px-6 py-3 rounded-full shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] uppercase text-center text-3xl xl:text-4xl font-semibold overflow-hidden relative">
+        <GlassEffect left={false} right={false} />
         আমাদের মেন্টর সমূহ
       </p>
 

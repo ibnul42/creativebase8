@@ -40,7 +40,7 @@ export default function Countdown({ targetDate }: CountdownProps) {
   }, [targetDate]);
 
   return (
-    <div className="flex gap-6 text-center justify-center backdrop-blur-2xl bg-white/10 px-4 py-1">
+    <div className="flex gap-6 text-center justify-center backdrop-blur-2xl bg-white/50 text-black px-4 py-1">
       {Object.entries(timeLeft).map(([label, value]) => (
         <div key={label}>
           <p className="text-3xl font-bold">{value}</p>

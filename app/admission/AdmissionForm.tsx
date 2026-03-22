@@ -1,6 +1,9 @@
 "use client";
+
 import Dropdown, { DropdownOption } from "@/components/Dropdown";
-import React, { useState } from "react";
+import React, { useActionState, useEffect, useRef, useState } from "react";
+import { submitAdmissionForm, type FormState } from "@/actions";
+import GlassEffect from "@/components/GlassEffect";
 
 const courses: DropdownOption[] = [
   { value: "Graphic design", label: "Graphic Design" },
@@ -17,99 +20,97 @@ const classTimes: DropdownOption[] = [
 ];
 
 export default function AdmissionForm() {
-  const [course, setCourse] = useState<string>("");
-  const [classTime, setClassTime] = useState<string>("");
+  const [course, setCourse] = useState("");
+  const [classTime, setClassTime] = useState("");
+
+  const [currentState, formAction, isPending] = useActionState<
+    FormState,
+    FormData
+  >(submitAdmissionForm, {});
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // ✅ Reset after success
+  useEffect(() => {
+    if (currentState.success) {
+      formRef.current?.reset();
+      setCourse("");
+      setClassTime("");
+    }
+  }, [currentState.success]);
 
   return (
     <div className="container mx-auto max-w-4xl px-3 grid grid-cols-12 gap-5 z-10">
-      <section className="px-6 lg:px-10 py-5 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg col-span-12 space-y-3 flex flex-col justify-center">
+      <section className="px-6 lg:px-10 py-5 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg col-span-12 space-y-3 flex flex-col justify-center overflow-hidden relative">
+        <GlassEffect bottomClass="bottom-[-12px]" />
         <p className="uppercase text-center text-3xl xl:text-4xl font-semibold">
           Admission Form
         </p>
       </section>
-      <form className="px-6 md:px-10 py-5 col-span-12 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg space-y-3 text-sm">
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="fullName" className="capitalize">
-            Full name
-          </label>
+
+      <form
+        ref={formRef}
+        action={formAction}
+        className="px-6 md:px-10 py-5 col-span-12 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg grid grid-cols-2 gap-3 text-sm overflow-hidden relative"
+      >
+        <GlassEffect />
+        <div className="flex flex-col gap-1">
+          <label>Full name</label>
           <input
             name="fullName"
-            type="text"
-            //   value=""
             placeholder="Enter your full name"
-            // onChange={}
-            className="px-3 py-2 rounded-md bg-white focus-within:outline-0 text-black/65 placeholder:capitalize"
+            className="px-3 py-1.5 rounded-md bg-white focus:outline-0 text-gray-800"
           />
         </div>
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="phone" className="capitalize">
-            Phone number
-          </label>
+
+        <div className="flex flex-col gap-1">
+          <label>Phone number</label>
           <input
             name="phone"
-            type="text"
-            //   value=""
             placeholder="Phone number"
-            // onChange={}
-            className="px-3 py-2 rounded-md bg-white focus-within:outline-0 text-black/65 placeholder:capitalize"
+            className="px-3 py-1.5 rounded-md bg-white focus:outline-0 text-gray-800"
           />
         </div>
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="whatsapp" className="capitalize">
-            WhatsApp
-          </label>
+
+        <div className="flex flex-col gap-1">
+          <label>WhatsApp</label>
           <input
             name="whatsapp"
-            type="text"
-            //   value=""
-            placeholder="whatsApp"
-            // onChange={}
-            className="px-3 py-2 rounded-md bg-white focus-within:outline-0 text-black/65 placeholder:capitalize"
+            placeholder="+8801XXXXXXXXX"
+            className="px-3 py-1.5 rounded-md bg-white focus:outline-0 text-gray-800"
           />
         </div>
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="email" className="capitalize">
-            Email
-          </label>
+
+        <div className="flex flex-col gap-1">
+          <label>Email</label>
           <input
-            name="emial"
-            type="text"
-            //   value=""
+            name="email"
             placeholder="email address"
-            // onChange={}
-            className="px-3 py-2 rounded-md bg-white focus-within:outline-0 text-black/65 placeholder:capitalize"
+            className="px-3 py-1.5 rounded-md bg-white focus:outline-0 text-gray-800"
           />
         </div>
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="address" className="capitalize">
-            Address
-          </label>
+
+        <div className="flex flex-col gap-1">
+          <label>Address</label>
           <input
             name="address"
-            type="text"
-            //   value=""
-            placeholder="Gopalnagor, Mohammadpur, Magura- 7630"
-            // onChange={}
-            className="px-3 py-2 rounded-md bg-white focus-within:outline-0 text-black/65 placeholder:capitalize"
+            placeholder="Your address"
+            className="px-3 py-1.5 rounded-md bg-white focus:outline-0 text-gray-800"
           />
         </div>
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="qualification" className="capitalize">
-            academic qualification
-          </label>
+
+        <div className="flex flex-col gap-1">
+          <label>Academic qualification</label>
           <input
             name="qualification"
-            type="text"
-            //   value=""
-            placeholder="example: SSC, HSC, Diploma"
-            // onChange={}
-            className="px-3 py-2 rounded-md bg-white focus-within:outline-0 text-black/65 placeholder:capitalize"
+            placeholder="SSC, HSC, Diploma"
+            className="px-3 py-1.5 rounded-md bg-white focus:outline-0 text-gray-800"
           />
         </div>
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="course" className="capitalize">
-            Which course you want to enrol?
-          </label>
+
+        {/* Course */}
+        <div className="flex flex-col gap-1">
+          <label>Course</label>
           <Dropdown
             options={courses}
             value={course}
@@ -117,12 +118,12 @@ export default function AdmissionForm() {
             placeholder="Please select an option"
             className={`w-full ${course ? "text-black" : "text-black/50"}`}
           />
+          <input type="hidden" name="course" value={course} />
         </div>
 
-        <div className="flex flex-col gap-1 col-span-1">
-          <label htmlFor="course" className="capitalize">
-            Preffered Class Time
-          </label>
+        {/* Class Time */}
+        <div className="flex flex-col gap-1">
+          <label>Preferred Class Time</label>
           <Dropdown
             options={classTimes}
             value={classTime}
@@ -130,12 +131,32 @@ export default function AdmissionForm() {
             placeholder="Select One"
             className={`w-full ${classTime ? "text-black" : "text-black/50"}`}
           />
+          <input type="hidden" name="classTime" value={classTime} />
         </div>
+
+        {/* Submit */}
         <div className="col-span-2 flex justify-end">
-          <button className="py-2 px-6 rounded-full border border-white/40 bg-white/10 hover:bg-white/15 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] transition-all cursor-pointer">
-            Submit
+          <button
+            disabled={isPending}
+            className="py-2 px-6 rounded-full border border-white/40 bg-white/10 hover:bg-white/15 shadow-[-1px_6px_4px_2px_rgba(0,0,0,0.3)] transition-all cursor-pointer"
+          >
+            {isPending ? "Submitting..." : "Submit"}
           </button>
         </div>
+
+        {/* Success */}
+        {currentState.success && (
+          <p className="text-green-600 text-center col-span-2">
+            ✓ {currentState.message}
+          </p>
+        )}
+
+        {/* Error */}
+        {currentState.error && (
+          <p className="text-red-600 text-center col-span-2">
+            {currentState.error}
+          </p>
+        )}
       </form>
     </div>
   );

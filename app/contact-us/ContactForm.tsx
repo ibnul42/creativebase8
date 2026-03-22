@@ -1,6 +1,7 @@
 "use client";
 
 import { type FormState, submitContactForm } from "@/actions";
+import GlassEffect from "@/components/GlassEffect";
 import React, { useActionState, useEffect, useRef } from "react";
 
 export default function ContactForm() {
@@ -22,8 +23,9 @@ export default function ContactForm() {
     <form
       ref={formRef}
       action={formAction}
-      className="px-6 md:px-10 py-5 col-span-12 md:col-span-8 border border-white/20 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg grid grid-cols-2 gap-3 text-sm"
+      className="px-6 md:px-10 py-5 col-span-12 md:col-span-8 backdrop-blur-xs shadow-[5px_5px_14px_1px_rgba(0,0,0,0.5)] rounded-lg grid grid-cols-2 gap-3 text-sm overflow-hidden relative"
     >
+      <GlassEffect />
       <div className="flex flex-col gap-1">
         <label>First name</label>
         <input name="firstName" placeholder="Hasan" className="px-3 py-1.5 rounded-md bg-white focus-within:outline-0 placeholder:text-gray-500 text-gray-800" />

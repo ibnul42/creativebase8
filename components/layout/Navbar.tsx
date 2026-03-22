@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import Image from "next/image";
+import GlassEffect from "../GlassEffect";
 
 const navigationLinks = [
   { name: "Home", href: "/" },
@@ -25,7 +26,8 @@ export default function Navbar() {
 
   return (
     <nav className="px-3">
-      <div className="container mx-auto px-4 border backdrop-blur-xs bg-white/5 border-white/20 shadow-[13px_11px_14px_1px_rgba(0,0,0,0.5)] rounded-lg md:rounded-full mt-3">
+      <div className="container mx-auto px-4 backdrop-blur-xs bg-white/5 border-white/20 shadow-[13px_11px_14px_1px_rgba(0,0,0,0.5)] rounded-lg md:rounded-full mt-3 overflow-hidden relative">
+      <GlassEffect topGlow={false} bottomGlow={false} left={false} right={false} />
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold">
