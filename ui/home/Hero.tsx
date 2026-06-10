@@ -38,7 +38,13 @@ export default function Hero() {
             href="/"
             className="px-6 py-2 w-fit mx-auto font-semibold transition-all cursor-pointer duration-300 rounded-full bg-white/10 flex items-center justify-center group overflow-hidden relative"
           >
-            <GlassEffect topGlow={false} bottomGlow={false} left={false} right={false} bottomClass="right-10" />
+            <GlassEffect
+              topGlow={false}
+              bottomGlow={false}
+              left={false}
+              right={false}
+              bottomClass="right-10"
+            />
             <span className="group-hover:-translate-x-2 transition-all">
               এখনই ভর্তি হন!
             </span>
